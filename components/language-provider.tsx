@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
 
-type Language = "es" | "en"
+type Language = "es" | "en" | "pt"
 
 interface LanguageContextType {
   language: Language
@@ -118,6 +118,7 @@ const translations = {
     language: "Idioma",
     spanish: "Español",
     english: "Inglés",
+    portuguese: "Portugués",
 
     // Team names
     team_fernando: "Equipo Fernando",
@@ -201,11 +202,96 @@ const translations = {
     language: "Language",
     spanish: "Spanish",
     english: "English",
+    portuguese: "Portuguese",
 
     // Team names
     team_fernando: "Team Fernando",
     team_benizio: "Team Benizio",
     team_jeremias: "Team Jeremías",
     team_genesis: "Team Génesis",
+  },
+  pt: {
+    // Navigation
+    overview: "Visão Geral",
+    teams: "Equipes",
+    racers: "Pilotos",
+    leagues: "Ligas",
+    records: "Recordes",
+    about: "Sobre",
+    rules: "Regras",
+    contact: "Contato",
+
+    // Homepage
+    tournament_title: "Torneio Mario Kart 64",
+    tournament_subtitle: "Competição estilo Fórmula 1 rastreando estatísticas de equipes e pilotos em múltiplas ligas",
+    team_most_wins: "Equipe com Mais Vitórias",
+    racer_most_wins: "Piloto com Mais Vitórias",
+    most_consecutive_wins: "Mais Vitórias Consecutivas",
+    league_champions: "Campeões da Liga",
+    total_victories: "vitórias totais",
+    individual_victories: "vitórias individuais",
+    races: "corridas",
+    tied_with: "Empatados com",
+    league_win_each: "vitória da liga cada",
+
+    // Teams
+    team_statistics: "Estatísticas das Equipes",
+    comprehensive_team_stats: "Estatísticas abrangentes para todas as equipes no Torneio Mario Kart 64",
+    managed_by: "Gerenciado por",
+    team_stats: "Estatísticas da Equipe",
+    league_positions: "Posições na Liga",
+
+    // Stats labels
+    wins: "Vitórias",
+    points: "Pontos",
+    position: "Pos",
+    team: "Equipe",
+    podiums: "Pódios",
+    status: "Status",
+
+    // Racers
+    racer_statistics: "Estatísticas dos Pilotos",
+    individual_statistics: "Estatísticas individuais para todos os pilotos no Torneio Mario Kart 64",
+    stats: "Estatísticas",
+
+    // Leagues
+    league_standings: "Classificação das Ligas",
+    view_standings: "Ver a classificação para cada liga no Torneio Mario Kart 64",
+    champion: "Campeão",
+    total_races: "Total de Corridas",
+    league_date: "Data da Liga",
+    current_league_leader: "Líder atual da liga",
+    races_in_league: "Corridas nesta liga",
+
+    // Records
+    tournament_records: "Recordes do Torneio",
+    records_achievements: "Recordes e conquistas em todas as classes de CC",
+    most_wins_overall: "Mais Vitórias Gerais",
+    most_podiums: "Mais Pódios",
+    most_points: "Mais Pontos",
+    across_cc_classes: "Em todas as classes de CC",
+    across_all_tracks: "Em todas as pistas",
+
+    // Positions
+    "1st": "1º",
+    "2nd": "2º",
+    "3rd": "3º",
+    "4th": "4º",
+    champion_label: "Campeão",
+    runner_up: "Vice-campeão",
+    "3rd_place": "3º Lugar",
+    "4th_place": "4º Lugar",
+
+    // Language
+    language: "Idioma",
+    spanish: "Espanhol",
+    english: "Inglês",
+    portuguese: "Português",
+
+    // Team names
+    team_fernando: "Equipe Fernando",
+    team_benizio: "Equipe Benizio",
+    team_jeremias: "Equipe Jeremías",
+    team_genesis: "Equipe Génesis",
   },
 }

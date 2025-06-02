@@ -10,7 +10,7 @@ import { LanguageProvider } from "@/components/language-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Mario Kart 64 Tournament Stats",
+  title: "Carreras Internacionales - MK 64",
   description: "Track statistics for Mario Kart 64 tournaments in Formula 1 style",
     generator: 'v0.dev'
 }

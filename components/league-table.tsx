@@ -211,7 +211,7 @@ const league150ccData = [
     racers: ["Yoshi", "Wario"],
     races: 16,
     wins: 9,
-    podiums: 14,
+    podiums: 16, // Changed from 14 to 16 (9+5+2)
     points: 39,
   },
   {
@@ -221,7 +221,7 @@ const league150ccData = [
     racers: ["Peach", "Bowser"],
     races: 16,
     wins: 6,
-    podiums: 13,
+    podiums: 15, // Changed from 13 to 15 (6+7+2)
     points: 34,
   },
   {
@@ -231,7 +231,7 @@ const league150ccData = [
     racers: ["Luigi", "Toad"],
     races: 16,
     wins: 1,
-    podiums: 5,
+    podiums: 13, // Changed from 5 to 13 (1+4+8)
     points: 19,
   },
   {
@@ -241,7 +241,7 @@ const league150ccData = [
     racers: ["Mario", "D.K."],
     races: 16,
     wins: 0,
-    podiums: 0,
+    podiums: 4, // This remains correct (0+0+4)
     points: 4,
   },
 ]
