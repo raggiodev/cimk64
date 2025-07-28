@@ -14,7 +14,13 @@ export default function LeagueTable({ league }: LeagueTableProps) {
   const { t } = useLanguage()
 
   // Determine which data to use based on the league
-  const data = league.includes("50cc") ? league50ccData : league.includes("100cc") ? league100ccData : league150ccData
+  const data = league.includes("Liga 1 (50cc)")
+    ? league50ccL1Data
+    : league.includes("Liga 4 (50cc)")
+      ? league50ccL4Data
+      : league.includes("100cc")
+        ? league100ccData
+        : league150ccData
 
   return (
     <div>
@@ -116,8 +122,8 @@ export default function LeagueTable({ league }: LeagueTableProps) {
   )
 }
 
-// Sample data for each league
-const league50ccData = [
+// Liga 1 - 50cc data (original)
+const league50ccL1Data = [
   {
     id: "fernando",
     nameKey: "team_fernando",
@@ -157,6 +163,50 @@ const league50ccData = [
     wins: 1,
     podiums: 2,
     points: 7,
+  },
+]
+
+// Liga 4 - 50cc data (new)
+const league50ccL4Data = [
+  {
+    id: "fernando",
+    nameKey: "team_fernando",
+    owner: "Fernando",
+    racers: ["Peach", "Bowser"],
+    races: 16,
+    wins: 6,
+    podiums: 16, // 6 first + 6 second + 4 third = 16 podiums
+    points: 34, // (6×3) + (6×2) + (4×1) = 18 + 12 + 4 = 34 points
+  },
+  {
+    id: "benizio",
+    nameKey: "team_benizio",
+    owner: "Benizio",
+    racers: ["Yoshi", "Wario"],
+    races: 16,
+    wins: 8,
+    podiums: 14, // 8 first + 3 second + 3 third = 14 podiums
+    points: 33, // (8×3) + (3×2) + (3×1) = 24 + 6 + 3 = 33 points
+  },
+  {
+    id: "jeremias",
+    nameKey: "team_jeremias",
+    owner: "Jeremías",
+    racers: ["Luigi", "Toad"],
+    races: 16,
+    wins: 2,
+    podiums: 15, // 2 first + 4 second + 9 third = 15 podiums
+    points: 23, // (2×3) + (4×2) + (9×1) = 6 + 8 + 9 = 23 points
+  },
+  {
+    id: "genesis",
+    nameKey: "team_genesis",
+    owner: "Génesis",
+    racers: ["Mario", "D.K."],
+    races: 16,
+    wins: 0,
+    podiums: 3, // 0 first + 3 second + 0 third = 3 podiums
+    points: 6, // (0×3) + (3×2) + (0×1) = 0 + 6 + 0 = 6 points
   },
 ]
 
@@ -211,7 +261,7 @@ const league150ccData = [
     racers: ["Yoshi", "Wario"],
     races: 16,
     wins: 9,
-    podiums: 16, // Changed from 14 to 16 (9+5+2)
+    podiums: 16,
     points: 39,
   },
   {
@@ -221,7 +271,7 @@ const league150ccData = [
     racers: ["Peach", "Bowser"],
     races: 16,
     wins: 6,
-    podiums: 15, // Changed from 13 to 15 (6+7+2)
+    podiums: 15,
     points: 34,
   },
   {
@@ -231,7 +281,7 @@ const league150ccData = [
     racers: ["Luigi", "Toad"],
     races: 16,
     wins: 1,
-    podiums: 13, // Changed from 5 to 13 (1+4+8)
+    podiums: 13,
     points: 19,
   },
   {
@@ -241,7 +291,7 @@ const league150ccData = [
     racers: ["Mario", "D.K."],
     races: 16,
     wins: 0,
-    podiums: 4, // This remains correct (0+0+4)
+    podiums: 4,
     points: 4,
   },
 ]

@@ -83,21 +83,21 @@ export default function TeamsPage() {
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-sm font-medium text-muted-foreground">{t("league_positions")}</h3>
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-2 gap-2">
                     <div className="flex flex-col items-center">
-                      <span className="text-xs text-muted-foreground">50cc</span>
+                      <span className="text-xs text-muted-foreground">50cc L1</span>
                       <Badge
                         className={
-                          team.cc50 === 1
+                          team.cc50L1 === 1
                             ? "bg-yellow-500"
-                            : team.cc50 === 2
+                            : team.cc50L1 === 2
                               ? "bg-gray-400 text-black"
-                              : team.cc50 === 3
+                              : team.cc50L1 === 3
                                 ? "bg-amber-700"
                                 : "bg-black text-muted-foreground"
                         }
                       >
-                        {t(team.cc50 === 1 ? "1st" : team.cc50 === 2 ? "2nd" : team.cc50 === 3 ? "3rd" : "4th")}
+                        {t(team.cc50L1 === 1 ? "1st" : team.cc50L1 === 2 ? "2nd" : team.cc50L1 === 3 ? "3rd" : "4th")}
                       </Badge>
                     </div>
                     <div className="flex flex-col items-center">
@@ -130,6 +130,22 @@ export default function TeamsPage() {
                         }
                       >
                         {t(team.cc150 === 1 ? "1st" : team.cc150 === 2 ? "2nd" : team.cc150 === 3 ? "3rd" : "4th")}
+                      </Badge>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <span className="text-xs text-muted-foreground">50cc L4</span>
+                      <Badge
+                        className={
+                          team.cc50L4 === 1
+                            ? "bg-yellow-500"
+                            : team.cc50L4 === 2
+                              ? "bg-gray-400 text-black"
+                              : team.cc50L4 === 3
+                                ? "bg-amber-700"
+                                : "bg-black text-muted-foreground"
+                        }
+                      >
+                        {t(team.cc50L4 === 1 ? "1st" : team.cc50L4 === 2 ? "2nd" : team.cc50L4 === 3 ? "3rd" : "4th")}
                       </Badge>
                     </div>
                   </div>
@@ -179,14 +195,15 @@ const teams = [
     nameKey: "team_fernando",
     owner: "Fernando",
     racers: ["Peach", "Bowser"],
-    wins: 25,
-    points: 110,
-    leagueWins: 2,
-    cc50: 1,
+    wins: 31,
+    points: 144,
+    leagueWins: 3,
+    cc50L1: 1,
     cc100: 1,
     cc150: 2,
+    cc50L4: 1,
     racerDetails: [
-      { id: "peach", name: "Peach", wins: 25 },
+      { id: "peach", name: "Peach", wins: 31 },
       { id: "bowser", name: "Bowser", wins: 0 },
     ],
   },
@@ -195,14 +212,15 @@ const teams = [
     nameKey: "team_benizio",
     owner: "Benizio",
     racers: ["Yoshi", "Wario"],
-    wins: 16,
-    points: 83,
+    wins: 24,
+    points: 116,
     leagueWins: 1,
-    cc50: 4,
+    cc50L1: 4,
     cc100: 3,
     cc150: 1,
+    cc50L4: 2,
     racerDetails: [
-      { id: "yoshi", name: "Yoshi", wins: 16 },
+      { id: "yoshi", name: "Yoshi", wins: 24 },
       { id: "wario", name: "Wario", wins: 0 },
     ],
   },
@@ -211,14 +229,15 @@ const teams = [
     nameKey: "team_jeremias",
     owner: "Jeremías",
     racers: ["Luigi", "Toad"],
-    wins: 6,
-    points: 78,
+    wins: 8,
+    points: 101,
     leagueWins: 0,
-    cc50: 2,
+    cc50L1: 2,
     cc100: 2,
     cc150: 3,
+    cc50L4: 3,
     racerDetails: [
-      { id: "luigi", name: "Luigi", wins: 6 },
+      { id: "luigi", name: "Luigi", wins: 8 },
       { id: "toad", name: "Toad", wins: 0 },
     ],
   },
@@ -228,11 +247,12 @@ const teams = [
     owner: "Génesis",
     racers: ["Mario", "D.K."],
     wins: 1,
-    points: 17,
+    points: 23,
     leagueWins: 0,
-    cc50: 3,
+    cc50L1: 3,
     cc100: 4,
     cc150: 4,
+    cc50L4: 4,
     racerDetails: [
       { id: "mario", name: "Mario", wins: 0 },
       { id: "dk", name: "D.K.", wins: 1 },

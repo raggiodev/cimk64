@@ -63,21 +63,31 @@ export default function RacersPage() {
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-sm font-medium text-muted-foreground">{t("league_positions")}</h3>
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-2 gap-2">
                     <div className="flex flex-col items-center">
-                      <span className="text-xs text-muted-foreground">50cc</span>
+                      <span className="text-xs text-muted-foreground">50cc L1</span>
                       <Badge
                         className={
-                          racer.cc50 === 1
+                          racer.cc50L1 === 1
                             ? "bg-yellow-500"
-                            : racer.cc50 === 2
+                            : racer.cc50L1 === 2
                               ? "bg-gray-400 text-black"
-                              : racer.cc50 === 3
+                              : racer.cc50L1 === 3
                                 ? "bg-amber-700"
                                 : "bg-black text-muted-foreground"
                         }
                       >
-                        {t(racer.cc50 === 1 ? "1st" : racer.cc50 === 2 ? "2nd" : racer.cc50 === 3 ? "3rd" : "4th")}
+                        {racer.cc50L1 === 0
+                          ? "N/A"
+                          : t(
+                              racer.cc50L1 === 1
+                                ? "1st"
+                                : racer.cc50L1 === 2
+                                  ? "2nd"
+                                  : racer.cc50L1 === 3
+                                    ? "3rd"
+                                    : "4th",
+                            )}
                       </Badge>
                     </div>
                     <div className="flex flex-col items-center">
@@ -93,7 +103,11 @@ export default function RacersPage() {
                                 : "bg-black text-muted-foreground"
                         }
                       >
-                        {t(racer.cc100 === 1 ? "1st" : racer.cc100 === 2 ? "2nd" : racer.cc100 === 3 ? "3rd" : "4th")}
+                        {racer.cc100 === 0
+                          ? "N/A"
+                          : t(
+                              racer.cc100 === 1 ? "1st" : racer.cc100 === 2 ? "2nd" : racer.cc100 === 3 ? "3rd" : "4th",
+                            )}
                       </Badge>
                     </div>
                     <div className="flex flex-col items-center">
@@ -109,7 +123,37 @@ export default function RacersPage() {
                                 : "bg-black text-muted-foreground"
                         }
                       >
-                        {t(racer.cc150 === 1 ? "1st" : racer.cc150 === 2 ? "2nd" : racer.cc150 === 3 ? "3rd" : "4th")}
+                        {racer.cc150 === 0
+                          ? "N/A"
+                          : t(
+                              racer.cc150 === 1 ? "1st" : racer.cc150 === 2 ? "2nd" : racer.cc150 === 3 ? "3rd" : "4th",
+                            )}
+                      </Badge>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <span className="text-xs text-muted-foreground">50cc L4</span>
+                      <Badge
+                        className={
+                          racer.cc50L4 === 1
+                            ? "bg-yellow-500"
+                            : racer.cc50L4 === 2
+                              ? "bg-gray-400 text-black"
+                              : racer.cc50L4 === 3
+                                ? "bg-amber-700"
+                                : "bg-black text-muted-foreground"
+                        }
+                      >
+                        {racer.cc50L4 === 0
+                          ? "N/A"
+                          : t(
+                              racer.cc50L4 === 1
+                                ? "1st"
+                                : racer.cc50L4 === 2
+                                  ? "2nd"
+                                  : racer.cc50L4 === 3
+                                    ? "3rd"
+                                    : "4th",
+                            )}
                       </Badge>
                     </div>
                   </div>
@@ -132,31 +176,34 @@ const racers = [
     id: "peach",
     name: "Peach",
     teamKey: "team_fernando",
-    wins: 25,
-    points: 110,
-    cc50: 1,
+    wins: 31,
+    points: 144,
+    cc50L1: 1,
     cc100: 1,
     cc150: 2,
+    cc50L4: 1,
   },
   {
     id: "yoshi",
     name: "Yoshi",
     teamKey: "team_benizio",
-    wins: 16,
-    points: 83,
-    cc50: 4,
+    wins: 24,
+    points: 116,
+    cc50L1: 4,
     cc100: 3,
     cc150: 1,
+    cc50L4: 2,
   },
   {
     id: "luigi",
     name: "Luigi",
     teamKey: "team_jeremias",
-    wins: 6,
-    points: 78,
-    cc50: 2,
+    wins: 8,
+    points: 101,
+    cc50L1: 2,
     cc100: 2,
     cc150: 3,
+    cc50L4: 3,
   },
   {
     id: "dk",
@@ -164,19 +211,21 @@ const racers = [
     teamKey: "team_genesis",
     wins: 1,
     points: 13,
-    cc50: 3,
+    cc50L1: 3,
     cc100: 0,
     cc150: 0,
+    cc50L4: 0,
   },
   {
     id: "mario",
     name: "Mario",
     teamKey: "team_genesis",
     wins: 0,
-    points: 4,
-    cc50: 0,
+    points: 10,
+    cc50L1: 0,
     cc100: 0,
     cc150: 4,
+    cc50L4: 4,
   },
   {
     id: "bowser",
@@ -184,9 +233,10 @@ const racers = [
     teamKey: "team_fernando",
     wins: 0,
     points: 0,
-    cc50: 0,
+    cc50L1: 0,
     cc100: 0,
     cc150: 0,
+    cc50L4: 0,
   },
   {
     id: "wario",
@@ -194,9 +244,10 @@ const racers = [
     teamKey: "team_benizio",
     wins: 0,
     points: 0,
-    cc50: 0,
+    cc50L1: 0,
     cc100: 0,
     cc150: 0,
+    cc50L4: 0,
   },
   {
     id: "toad",
@@ -204,8 +255,9 @@ const racers = [
     teamKey: "team_jeremias",
     wins: 0,
     points: 0,
-    cc50: 0,
+    cc50L1: 0,
     cc100: 0,
     cc150: 0,
+    cc50L4: 0,
   },
 ]

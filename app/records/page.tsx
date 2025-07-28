@@ -34,7 +34,7 @@ export default function RecordsPage() {
                 />
               </div>
               <div>
-                <div className="font-bold">Peach - 25 {t("wins")}</div>
+                <div className="font-bold">Peach - 31 {t("wins")}</div>
                 <p className="text-xs text-muted-foreground">{t("across_cc_classes")}</p>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function RecordsPage() {
               </div>
               <div>
                 <div className="font-bold">
-                  {t("team_fernando")} - 45 {t("podiums")}
+                  {t("team_fernando")} - 58 {t("podiums")}
                 </div>
                 <p className="text-xs text-muted-foreground">{t("across_all_tracks")}</p>
               </div>
@@ -105,7 +105,7 @@ export default function RecordsPage() {
               </div>
               <div>
                 <div className="font-bold">
-                  {t("team_fernando")} - 110 {t("points")}
+                  {t("team_fernando")} - 144 {t("points")}
                 </div>
                 <p className="text-xs text-muted-foreground">{t("across_all_tracks")}</p>
               </div>

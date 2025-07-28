@@ -43,9 +43,10 @@ export default function Home() {
         </TabsContent>
         <TabsContent value="leagues" className="pt-4">
           <div className="grid gap-6">
-            <LeagueTable league="League 1 (50cc)" />
-            <LeagueTable league="League 2 (100cc)" />
-            <LeagueTable league="League 3 (150cc)" />
+            <LeagueTable league="Liga 1 (50cc)" />
+            <LeagueTable league="Liga 2 (100cc)" />
+            <LeagueTable league="Liga 3 (150cc)" />
+            <LeagueTable league="Liga 4 (50cc)" />
           </div>
         </TabsContent>
         <TabsContent value="records" className="pt-4">
@@ -113,24 +114,24 @@ const teams = [
     nameKey: "team_fernando",
     owner: "Fernando",
     racers: ["Peach", "Bowser"],
-    wins: 25,
-    points: 110,
+    wins: 31,
+    points: 144,
   },
   {
     id: "benizio",
     nameKey: "team_benizio",
     owner: "Benizio",
     racers: ["Yoshi", "Wario"],
-    wins: 16,
-    points: 83,
+    wins: 24,
+    points: 116,
   },
   {
     id: "jeremias",
     nameKey: "team_jeremias",
     owner: "Jeremías",
     racers: ["Luigi", "Toad"],
-    wins: 6,
-    points: 78,
+    wins: 8,
+    points: 101,
   },
   {
     id: "genesis",
@@ -138,6 +139,6 @@ const teams = [
     owner: "Génesis",
     racers: ["Mario", "D.K."],
     wins: 1,
-    points: 17,
+    points: 23,
   },
 ]
