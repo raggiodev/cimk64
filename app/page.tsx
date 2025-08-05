@@ -80,9 +80,14 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <span>{t(team.nameKey)}</span>
+                  <div>
+                    <span>{team.owner}</span>
+                  </div>
                 </CardTitle>
-                <CardDescription>{team.owner}</CardDescription>
+                <CardDescription>
+                  <div>{t(team.nameKey)}</div>
+                  <div>{team.racers.join(" & ")}</div>
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-2 text-sm">

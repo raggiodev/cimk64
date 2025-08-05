@@ -68,9 +68,9 @@ export default function RecordsPage() {
                 </div>
               </div>
               <div>
-                <div className="font-bold">
-                  {t("team_fernando")} - 58 {t("podiums")}
-                </div>
+                <div className="font-bold">Fernando</div>
+                <div className="text-xs">{t("team_fernando")}</div>
+                <div className="text-xs">Peach & Bowser - 58 {t("podiums")}</div>
                 <p className="text-xs text-muted-foreground">{t("across_all_tracks")}</p>
               </div>
             </div>
@@ -104,9 +104,9 @@ export default function RecordsPage() {
                 </div>
               </div>
               <div>
-                <div className="font-bold">
-                  {t("team_fernando")} - 144 {t("points")}
-                </div>
+                <div className="font-bold">Fernando</div>
+                <div className="text-xs">{t("team_fernando")}</div>
+                <div className="text-xs">Peach & Bowser - 144 {t("points")}</div>
                 <p className="text-xs text-muted-foreground">{t("across_all_tracks")}</p>
               </div>
             </div>

@@ -52,7 +52,16 @@ function OverallRecords() {
         <TableBody>
           {overallRecords.map((record) => (
             <TableRow key={record.teamKey} className="hover:bg-muted/50">
-              <TableCell className="font-medium">{t(record.teamKey)}</TableCell>
+              <TableCell className="font-medium">
+                <div>
+                  <div className="font-medium">
+                    {overallRecords.find((r) => r.teamKey === record.teamKey)?.owner ||
+                      record.teamKey.replace("team_", "").charAt(0).toUpperCase() +
+                        record.teamKey.replace("team_", "").slice(1)}
+                  </div>
+                  <div className="text-xs text-muted-foreground">{t(record.teamKey)}</div>
+                </div>
+              </TableCell>
               <TableCell>
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
@@ -131,7 +140,15 @@ function RecordsByCc({ cc }: { cc: string }) {
         <TableBody>
           {records.map((record) => (
             <TableRow key={record.teamKey} className="hover:bg-muted/50">
-              <TableCell className="font-medium">{t(record.teamKey)}</TableCell>
+              <TableCell className="font-medium">
+                <div>
+                  <div className="font-medium">
+                    {record.teamKey.replace("team_", "").charAt(0).toUpperCase() +
+                      record.teamKey.replace("team_", "").slice(1)}
+                  </div>
+                  <div className="text-xs text-muted-foreground">{t(record.teamKey)}</div>
+                </div>
+              </TableCell>
               <TableCell>
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
@@ -187,6 +204,7 @@ function RecordsByCc({ cc }: { cc: string }) {
 const overallRecords = [
   {
     teamKey: "team_fernando",
+    owner: "Fernando",
     racers: ["Peach", "Bowser"],
     wins: 31, // 9 + 10 + 6 + 6
     points: 144, // 27 + 49 + 34 + 34
@@ -195,6 +213,7 @@ const overallRecords = [
   },
   {
     teamKey: "team_benizio",
+    owner: "Benizio",
     racers: ["Yoshi", "Wario"],
     wins: 24, // 1 + 6 + 9 + 8
     points: 116, // 7 + 37 + 39 + 33
@@ -203,6 +222,7 @@ const overallRecords = [
   },
   {
     teamKey: "team_jeremias",
+    owner: "Jeremías",
     racers: ["Luigi", "Toad"],
     wins: 8, // 0 + 5 + 1 + 2
     points: 101, // 19 + 40 + 19 + 23
@@ -211,6 +231,7 @@ const overallRecords = [
   },
   {
     teamKey: "team_genesis",
+    owner: "Génesis",
     racers: ["Mario", "D.K."],
     wins: 1, // 1 + 0 + 0 + 0
     points: 23, // 13 + 0 + 4 + 6
@@ -224,6 +245,7 @@ const ccRecords = {
   cc50: [
     {
       teamKey: "team_fernando",
+      owner: "Fernando",
       racers: ["Peach", "Bowser"],
       wins: 15, // 9 (L1) + 6 (L4)
       points: 61, // 27 (L1) + 34 (L4)
@@ -231,6 +253,7 @@ const ccRecords = {
     },
     {
       teamKey: "team_benizio",
+      owner: "Benizio",
       racers: ["Yoshi", "Wario"],
       wins: 9, // 1 (L1) + 8 (L4)
       points: 40, // 7 (L1) + 33 (L4)
@@ -238,6 +261,7 @@ const ccRecords = {
     },
     {
       teamKey: "team_jeremias",
+      owner: "Jeremías",
       racers: ["Luigi", "Toad"],
       wins: 2, // 0 (L1) + 2 (L4)
       points: 42, // 19 (L1) + 23 (L4)
@@ -245,6 +269,7 @@ const ccRecords = {
     },
     {
       teamKey: "team_genesis",
+      owner: "Génesis",
       racers: ["Mario", "D.K."],
       wins: 1, // 1 (L1) + 0 (L4)
       points: 19, // 13 (L1) + 6 (L4)
@@ -254,6 +279,7 @@ const ccRecords = {
   cc100: [
     {
       teamKey: "team_fernando",
+      owner: "Fernando",
       racers: ["Peach", "Bowser"],
       wins: 10,
       points: 49,
@@ -261,6 +287,7 @@ const ccRecords = {
     },
     {
       teamKey: "team_jeremias",
+      owner: "Jeremías",
       racers: ["Luigi", "Toad"],
       wins: 5,
       points: 40,
@@ -268,6 +295,7 @@ const ccRecords = {
     },
     {
       teamKey: "team_benizio",
+      owner: "Benizio",
       racers: ["Yoshi", "Wario"],
       wins: 6,
       points: 37,
@@ -275,6 +303,7 @@ const ccRecords = {
     },
     {
       teamKey: "team_genesis",
+      owner: "Génesis",
       racers: ["Mario", "D.K."],
       wins: 0,
       points: 0,
@@ -284,6 +313,7 @@ const ccRecords = {
   cc150: [
     {
       teamKey: "team_benizio",
+      owner: "Benizio",
       racers: ["Yoshi", "Wario"],
       wins: 9,
       points: 39,
@@ -291,6 +321,7 @@ const ccRecords = {
     },
     {
       teamKey: "team_fernando",
+      owner: "Fernando",
       racers: ["Peach", "Bowser"],
       wins: 6,
       points: 34,
@@ -298,6 +329,7 @@ const ccRecords = {
     },
     {
       teamKey: "team_jeremias",
+      owner: "Jeremías",
       racers: ["Luigi", "Toad"],
       wins: 1,
       points: 19,
@@ -305,10 +337,18 @@ const ccRecords = {
     },
     {
       teamKey: "team_genesis",
+      owner: "Génesis",
       racers: ["Mario", "D.K."],
       wins: 0,
       points: 4,
       podiums: 4,
     },
   ],
+}
+
+const teamOwners = {
+  team_fernando: "Fernando",
+  team_benizio: "Benizio",
+  team_jeremias: "Jeremías",
+  team_genesis: "Génesis",
 }

@@ -46,9 +46,10 @@ export default function TeamsPage() {
                   </div>
                 </div>
                 <div>
-                  <CardTitle>{t(team.nameKey)}</CardTitle>
+                  <CardTitle>{team.owner}</CardTitle>
                   <CardDescription>
-                    {t("managed_by")} {team.owner}
+                    <div>{t(team.nameKey)}</div>
+                    <div>{team.racers.join(" & ")}</div>
                   </CardDescription>
                 </div>
               </div>

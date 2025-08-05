@@ -65,8 +65,9 @@ export default function LeagueTable({ league }: LeagueTableProps) {
                       </div>
                     </div>
                     <div>
-                      <div className="font-medium">{t(team.nameKey)}</div>
-                      <div className="text-xs text-muted-foreground">{team.owner}</div>
+                      <div className="font-medium">{team.owner}</div>
+                      <div className="text-xs text-muted-foreground">{t(team.nameKey)}</div>
+                      <div className="text-xs text-muted-foreground">{team.racers.join(" & ")}</div>
                     </div>
                   </div>
                 </TableCell>
