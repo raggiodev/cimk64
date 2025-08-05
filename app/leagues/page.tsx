@@ -16,41 +16,52 @@ export default function LeaguesPage() {
         <p className="text-muted-foreground max-w-[700px]">{t("view_standings")}</p>
       </div>
 
-      <Tabs defaultValue="50cc">
-        <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="50cc">League 1 (50cc)</TabsTrigger>
-          <TabsTrigger value="100cc">League 2 (100cc)</TabsTrigger>
-          <TabsTrigger value="150cc">League 3 (150cc)</TabsTrigger>
+      <Tabs defaultValue="50cc-l1">
+        <TabsList className="grid w-full grid-cols-4">
+          <TabsTrigger value="50cc-l1">Liga 1 (50cc)</TabsTrigger>
+          <TabsTrigger value="100cc">Liga 2 (100cc)</TabsTrigger>
+          <TabsTrigger value="150cc">Liga 3 (150cc)</TabsTrigger>
+          <TabsTrigger value="50cc-l4">Liga 4 (50cc)</TabsTrigger>
         </TabsList>
-        <TabsContent value="50cc" className="pt-4">
+        <TabsContent value="50cc-l1" className="pt-4">
           <LeagueDetails
-            league="League 1 (50cc)"
+            league="Liga 1 (50cc)"
             champion={t("team_fernando")}
             runnerUp={t("team_jeremias")}
             races={11}
             date="22/12/2022"
           />
-          <LeagueTable league="League 1 (50cc)" />
+          <LeagueTable league="Liga 1 (50cc)" />
         </TabsContent>
         <TabsContent value="100cc" className="pt-4">
           <LeagueDetails
-            league="League 2 (100cc)"
+            league="Liga 2 (100cc)"
             champion={t("team_fernando")}
             runnerUp={t("team_jeremias")}
             races={21}
             date="23/01/2025"
           />
-          <LeagueTable league="League 2 (100cc)" />
+          <LeagueTable league="Liga 2 (100cc)" />
         </TabsContent>
         <TabsContent value="150cc" className="pt-4">
           <LeagueDetails
-            league="League 3 (150cc)"
+            league="Liga 3 (150cc)"
             champion={t("team_benizio")}
             runnerUp={t("team_fernando")}
             races={16}
             date="19/05/2025"
           />
-          <LeagueTable league="League 3 (150cc)" />
+          <LeagueTable league="Liga 3 (150cc)" />
+        </TabsContent>
+        <TabsContent value="50cc-l4" className="pt-4">
+          <LeagueDetails
+            league="Liga 4 (50cc)"
+            champion={t("team_fernando")}
+            runnerUp={t("team_benizio")}
+            races={16}
+            date="15/08/2025"
+          />
+          <LeagueTable league="Liga 4 (50cc)" />
         </TabsContent>
       </Tabs>
     </div>
