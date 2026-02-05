@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Carreras Internacionales - MK 64",
   description: "Track statistics for Mario Kart 64 tournaments in Formula 1 style",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
