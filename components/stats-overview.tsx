@@ -36,7 +36,7 @@ export default function StatsOverview() {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">{t("team_fernando")}</div>
-          <p className="text-xs text-muted-foreground">3 {t("races")}</p>
+          <p className="text-xs text-muted-foreground">2 carreras consecutivas{t("races")}</p>
         </CardContent>
       </Card>
       <Card className="border-2 border-purple-500/20 hover:border-purple-500/50 transition-colors">
