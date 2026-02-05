@@ -47,6 +47,7 @@ export default function Home() {
             <LeagueTable league="Liga 2 (100cc)" />
             <LeagueTable league="Liga 3 (150cc)" />
             <LeagueTable league="Liga 4 (50cc)" />
+            <LeagueTable league="Liga 5 (100cc)" />
           </div>
         </TabsContent>
         <TabsContent value="records" className="pt-4">
@@ -119,31 +120,31 @@ const teams = [
     nameKey: "team_fernando",
     owner: "Fernando",
     racers: ["Peach", "Bowser"],
-    wins: 31,
-    points: 144,
+    wins: 38, // 9+10+6+6+7
+    points: 180, // 27+49+34+34+36
   },
   {
     id: "benizio",
     nameKey: "team_benizio",
     owner: "Benizio",
     racers: ["Yoshi", "Wario"],
-    wins: 24,
-    points: 116,
+    wins: 32, // 1+6+9+8+8
+    points: 154, // 7+37+39+33+38
   },
   {
     id: "jeremias",
     nameKey: "team_jeremias",
     owner: "Jeremías",
     racers: ["Luigi", "Toad"],
-    wins: 8,
-    points: 101,
+    wins: 9, // 0+5+1+2+1
+    points: 123, // 19+40+19+23+22
   },
   {
     id: "genesis",
     nameKey: "team_genesis",
     owner: "Génesis",
     racers: ["Mario", "D.K."],
-    wins: 1,
-    points: 23,
+    wins: 1, // 1+0+0+0+0
+    points: 23, // 13+0+4+6+0
   },
 ]

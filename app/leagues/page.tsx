@@ -17,11 +17,12 @@ export default function LeaguesPage() {
       </div>
 
       <Tabs defaultValue="50cc-l1">
-        <TabsList className="grid w-full grid-cols-4">
-          <TabsTrigger value="50cc-l1">Liga 1 (50cc)</TabsTrigger>
-          <TabsTrigger value="100cc">Liga 2 (100cc)</TabsTrigger>
-          <TabsTrigger value="150cc">Liga 3 (150cc)</TabsTrigger>
-          <TabsTrigger value="50cc-l4">Liga 4 (50cc)</TabsTrigger>
+        <TabsList className="grid w-full grid-cols-5">
+          <TabsTrigger value="50cc-l1">Liga 1</TabsTrigger>
+          <TabsTrigger value="100cc-l2">Liga 2</TabsTrigger>
+          <TabsTrigger value="150cc">Liga 3</TabsTrigger>
+          <TabsTrigger value="50cc-l4">Liga 4</TabsTrigger>
+          <TabsTrigger value="100cc-l5">Liga 5</TabsTrigger>
         </TabsList>
         <TabsContent value="50cc-l1" className="pt-4">
           <LeagueDetails
@@ -33,7 +34,7 @@ export default function LeaguesPage() {
           />
           <LeagueTable league="Liga 1 (50cc)" />
         </TabsContent>
-        <TabsContent value="100cc" className="pt-4">
+        <TabsContent value="100cc-l2" className="pt-4">
           <LeagueDetails
             league="Liga 2 (100cc)"
             champion={t("team_fernando")}
@@ -62,6 +63,16 @@ export default function LeaguesPage() {
             date="15/08/2025"
           />
           <LeagueTable league="Liga 4 (50cc)" />
+        </TabsContent>
+        <TabsContent value="100cc-l5" className="pt-4">
+          <LeagueDetails
+            league="Liga 5 (100cc)"
+            champion={t("team_benizio")}
+            runnerUp={t("team_fernando")}
+            races={16}
+            date=""
+          />
+          <LeagueTable league="Liga 5 (100cc)" />
         </TabsContent>
       </Tabs>
     </div>

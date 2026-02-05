@@ -16,7 +16,7 @@ export default function StatsOverview() {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">{t("team_fernando")}</div>
-          <p className="text-xs text-muted-foreground">31 {t("total_victories")}</p>
+          <p className="text-xs text-muted-foreground">38 {t("total_victories")}</p>
         </CardContent>
       </Card>
       <Card className="border-2 border-blue-500/20 hover:border-blue-500/50 transition-colors">
@@ -26,7 +26,7 @@ export default function StatsOverview() {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">Peach</div>
-          <p className="text-xs text-muted-foreground">31 {t("individual_victories")}</p>
+          <p className="text-xs text-muted-foreground">38 {t("individual_victories")}</p>
         </CardContent>
       </Card>
       <Card className="border-2 border-orange-500/20 hover:border-orange-500/50 transition-colors">
@@ -36,7 +36,7 @@ export default function StatsOverview() {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">{t("team_fernando")}</div>
-          <p className="text-xs text-muted-foreground">2 carreras consecutivas</p>
+          <p className="text-xs text-muted-foreground">{t("consecutive_wins_detail")}</p>
         </CardContent>
       </Card>
       <Card className="border-2 border-purple-500/20 hover:border-purple-500/50 transition-colors">
@@ -45,8 +45,8 @@ export default function StatsOverview() {
           <Award className="h-4 w-4 text-purple-500" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">3 {t("teams")}</div>
-          <p className="text-xs text-muted-foreground">Fernando (3), Benizio (1)</p>
+          <div className="text-2xl font-bold">2 {t("teams")}</div>
+          <p className="text-xs text-muted-foreground">Fernando (3), Benizio (2)</p>
         </CardContent>
       </Card>
     </div>

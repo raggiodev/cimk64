@@ -65,6 +65,8 @@ const translations = {
     races: "carreras",
     tied_with: "Empatados con",
     league_win_each: "victoria de liga cada uno",
+    consecutive_wins_detail: "2 carreras consecutivas",
+    did_not_participate: "No participó",
 
     // Teams
     team_statistics: "Estadísticas de Equipos",
@@ -149,6 +151,8 @@ const translations = {
     races: "races",
     tied_with: "Tied with",
     league_win_each: "league win each",
+    consecutive_wins_detail: "2 consecutive races",
+    did_not_participate: "Did not participate",
 
     // Teams
     team_statistics: "Team Statistics",
@@ -233,6 +237,8 @@ const translations = {
     races: "corridas",
     tied_with: "Empatados com",
     league_win_each: "vitória da liga cada",
+    consecutive_wins_detail: "2 corridas consecutivas",
+    did_not_participate: "Não participou",
 
     // Teams
     team_statistics: "Estatísticas das Equipes",

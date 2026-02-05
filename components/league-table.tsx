@@ -18,9 +18,11 @@ export default function LeagueTable({ league }: LeagueTableProps) {
     ? league50ccL1Data
     : league.includes("Liga 4 (50cc)")
       ? league50ccL4Data
-      : league.includes("100cc")
-        ? league100ccData
-        : league150ccData
+      : league.includes("Liga 2 (100cc)")
+        ? league100ccL2Data
+        : league.includes("Liga 5 (100cc)")
+          ? league100ccL5Data
+          : league150ccData
 
   return (
     <div>
@@ -211,7 +213,8 @@ const league50ccL4Data = [
   },
 ]
 
-const league100ccData = [
+// Liga 2 - 100cc data (new)
+const league100ccL2Data = [
   {
     id: "fernando",
     nameKey: "team_fernando",
@@ -251,6 +254,50 @@ const league100ccData = [
     wins: 0,
     podiums: 0,
     points: 0,
+  },
+]
+
+// Liga 5 - 100cc data (second 100cc competition)
+const league100ccL5Data = [
+  {
+    id: "benizio",
+    nameKey: "team_benizio",
+    owner: "Benizio",
+    racers: ["Yoshi", "Wario"],
+    races: 16,
+    wins: 8,
+    podiums: 16, // 8 first + 6 second + 2 third = 16
+    points: 38, // (8*3) + (6*2) + (2*1) = 24 + 12 + 2 = 38
+  },
+  {
+    id: "fernando",
+    nameKey: "team_fernando",
+    owner: "Fernando",
+    racers: ["Peach", "Bowser"],
+    races: 16,
+    wins: 7,
+    podiums: 16, // 7 first + 6 second + 3 third = 16
+    points: 36, // (7*3) + (6*2) + (3*1) = 21 + 12 + 3 = 36
+  },
+  {
+    id: "jeremias",
+    nameKey: "team_jeremias",
+    owner: "Jeremías",
+    racers: ["Luigi", "Toad"],
+    races: 16,
+    wins: 1,
+    podiums: 16, // 1 first + 4 second + 11 third = 16
+    points: 22, // (1*3) + (4*2) + (11*1) = 3 + 8 + 11 = 22
+  },
+  {
+    id: "genesis",
+    nameKey: "team_genesis",
+    owner: "Génesis",
+    racers: ["Mario", "D.K."],
+    races: 16,
+    wins: 0,
+    podiums: 0, // 0 first + 0 second + 0 third = 0
+    points: 0, // (0*3) + (0*2) + (0*1) = 0
   },
 ]
 
